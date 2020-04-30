@@ -35,6 +35,8 @@ namespace OpenVIII
                     return new WindowsGameLocationProvider();
                 case RuntimePlatform.Linux:
                     return new LinuxGameLocationProvider();
+                case RuntimePlatform.MacOSX:
+                    return new MacOsGameLocationProvider();
                 default:
                     throw new NotSupportedException(RuntimeEnvironment.Platform.ToString());
             }
